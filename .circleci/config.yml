@@ -8,4 +8,4 @@ jobs:
     steps:
     - checkout
     - run:
-        command: echo unit test
+        command: ./vendor/bin/phpunit
