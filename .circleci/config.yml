@@ -3,8 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/php:7.1-node-browsers
-    working_directory: ~https://github.com/harikrishna-wal/test-project-circleci.git
+      - image: circleci/php:7.1.7
+    working_directory: ~/test-project-circleci
     steps:
       - checkout
-      - run: yarn install
