@@ -4,6 +4,8 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.1-node-browsers
-    working_directory: ~/test-project-circleci
+   
     steps:
-      - checkout
+    - checkout
+    - run:
+        command: echo unit test
