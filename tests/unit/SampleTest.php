@@ -4,10 +4,9 @@ use PHPUnit\Framework\TestCase;
 class SampleTest extends TestCase
 {
   public function testTrueAssertsToTrue() {
-    echo
-    //$this->assertTrue(false);
-
+    $this->assertTrue(true);
   }
 }
+
 
 ?>
