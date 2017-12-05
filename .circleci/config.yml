@@ -1,28 +1,7 @@
-machine:
-  timezone:
-    America/New_York
+version: 2
 
-  php:
-    version:
-      7.1.7
-
-  environment:
-    WP_VERSION: latest
-    CIRCLE_ENV: test
-
-  jobs:
+jobs:
   build:
     docker:
       - image: circleci/php:7.1-node-browsers
-
-dependencies:
-  pre:
-    - git clone https://github.com/harikrishna-wal/test-project-circleci.git
-
-  override:
-    - touch composer.json
-    - ls
-
-  test:
-    override:
-      - phpunit tests
+    working_directory: ~/test-project-circleci
