@@ -10,6 +10,11 @@ machine:
     WP_VERSION: latest
     CIRCLE_ENV: test
 
+  jobs:
+  build:
+    docker:
+      - image: circleci/php:7.1-node-browsers
+
 dependencies:
   pre:
     - git clone https://github.com/harikrishna-wal/test-project-circleci.git
