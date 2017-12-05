@@ -1,0 +1,23 @@
+machine:
+  timezone:
+    America/New_York
+
+  php:
+    version:
+      7.1.7
+
+  environment:
+    WP_VERSION: latest
+    CIRCLE_ENV: test
+
+dependencies:
+  pre:
+    - git clone https://github.com/harikrishna-wal/test-project-circleci.git
+
+  override:
+    - touch composer.json
+    - ls
+
+  test:
+    override:
+      - phpunit tests
